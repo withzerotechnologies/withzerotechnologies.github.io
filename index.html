@@ -27,5 +27,15 @@
     <footer>
         <p><a href="mailto:hello@withzero.io">hello@withzero.io</a></p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.circle-container').on('touchstart', function() {
+            $(this).addClass('active');
+        });
+
+        $('.circle-container').on('touchend', function() {
+            $(this).removeClass('active');
+        });
+    </script>
 </body>
 </html>
