@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
 }
 
 footer {
@@ -67,12 +67,14 @@ footer a {
     transition: transform 0.5s ease;
 }
 
-.circle-container:hover .circle:first-child {
+.circle-container:hover .circle:first-child, 
+.circle-container:active .circle:first-child {
     transition: all 2s;
     transform: rotateY(360deg);
 }
 
-.circle-container:hover .circle:last-child {
+.circle-container:hover .circle:last-child, 
+.circle-container:active .circle:last-child {
     transition: all 2s;
     transform: rotateY(-180deg);
 }
