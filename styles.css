@@ -42,16 +42,12 @@ footer a {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .logo, .tagline {
-        transform: scale(0.8);
+    .tagline {
+    text-align: center;
+    margin: 20px 10px 20px 10px;
     }
 }
 
-@media (max-width: 480px) {
-    .logo, .tagline {
-        transform: scale(0.6);
-    }
-}
 .circle-container {
     position: relative;
     width: 120px; /* Width of the circles */
