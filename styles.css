@@ -21,8 +21,8 @@ footer {
 }
 
 footer a {
-    color: white; /* Sets the text color to white */
-    text-decoration: none; /* Removes the underline */
+    color: white;
+    text-decoration: none; 
 }
 
 .logo {
@@ -30,17 +30,16 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 200px; /* Ensure the logo has a height to center the circles vertically */
+    min-height: 200px; 
     height: auto;
-    text-align: center; /* Center the content within the logo */
+    text-align: center; 
 }
 
 .tagline {
     font-size: 1em;
-    margin-top: 20px; /* Add space between the logo and the tagline */
+    margin-top: 20px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .tagline {
     text-align: center;
@@ -50,8 +49,8 @@ footer a {
 
 .circle-container {
     position: relative;
-    width: 120px; /* Width of the circles */
-    height: 120px; /* Increased height to accommodate floating movement */
+    width: 120px; 
+    height: 120px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,12 +58,12 @@ footer a {
 
 .circle {
     position: absolute;
-    width: 120px; /* Adjusted width for an oval shape */
-    height: 150px; /* Adjusted height for an oval shape */
+    width: 120px; 
+    height: 150px; 
     border-radius: 50%;
     border: 2px solid white;
     background-color: transparent;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adds a subtle white glow */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
     transition: transform 0.5s ease;
 }
 
@@ -79,8 +78,8 @@ footer a {
 }
 
 .circle:first-child {
-    left: -10px; /* Moves the first circle slightly to the left */
-    top: -10px; /* Moves the first circle slightly up */
+    left: -10px; 
+    top: -10px; 
 }
 
 .circle:last-child {
@@ -91,8 +90,8 @@ footer a {
 .subscribe-form {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the form horizontally */
-    margin-top: 20px; /* Add space between the tagline and the form */
+    justify-content: center; 
+    margin-top: 20px; 
     margin-left: 30px;;
 }
 
