@@ -1,0 +1,138 @@
+/* styles.css */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes the underline */
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Ensure the logo has a height to center the circles vertically */
+    height: auto;
+    text-align: center; /* Center the content within the logo */
+}
+
+.tagline {
+    font-size: 1em;
+    margin-top: 20px; /* Add space between the logo and the tagline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo, .tagline {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo, .tagline {
+        transform: scale(0.6);
+    }
+}
+.circle-container {
+    position: relative;
+    width: 120px; /* Width of the circles */
+    height: 120px; /* Increased height to accommodate floating movement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    width: 120px; /* Adjusted width for an oval shape */
+    height: 150px; /* Adjusted height for an oval shape */
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adds a subtle white glow */
+    transition: transform 0.5s ease;
+}
+
+.circle-container:hover .circle:first-child {
+    transition: all 2s;
+    transform: rotateY(360deg);
+}
+
+.circle-container:hover .circle:last-child {
+    transition: all 2s;
+    transform: rotateY(-180deg);
+}
+
+.circle:first-child {
+    left: -10px; /* Moves the first circle slightly to the left */
+    top: -10px; /* Moves the first circle slightly up */
+}
+
+.circle:last-child {
+    left: 0;
+    top: 0;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the form horizontally */
+    margin-top: 20px; /* Add space between the tagline and the form */
+    margin-left: 30px;;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    max-width: 235px;
+}
+
+.subscribe-form button {
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.subscribe-form input[type="email"]:focus + button {
+    opacity: 1;
+    transition: opacity 0.3s;
+    border-bottom: 2px solid white;
+}
+
+.subscribe-form button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    transition: transform 0.5s;
+}
+
+.subscribe-form button:hover {
+    transition: transform 0.5s;
+}
