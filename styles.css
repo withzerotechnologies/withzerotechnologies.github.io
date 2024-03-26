@@ -23,6 +23,8 @@ footer {
 footer a {
     color: white;
     text-decoration: none; 
+    opacity: 0;
+    animation: fadeInAnimation 2s 4s ease-in forwards;
 }
 
 .logo {
@@ -33,11 +35,15 @@ footer a {
     min-height: 200px; 
     height: auto;
     text-align: center; 
+    opacity: 0;
+    animation: fadeInAnimation 2s 2s ease-in forwards;
 }
 
 .tagline {
     font-size: 1em;
     margin-top: 20px;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
 }
 
 @media (max-width: 768px) {
@@ -68,13 +74,13 @@ footer a {
 }
 
 .circle-container:hover .circle:first-child, 
-.circle-container:active .circle:first-child {
+.circle-container.active .circle:first-child {
     transition: all 2s;
     transform: rotateY(360deg);
 }
 
 .circle-container:hover .circle:last-child, 
-.circle-container:active .circle:last-child {
+.circle-container.active .circle:last-child {
     transition: all 2s;
     transform: rotateY(-180deg);
 }
@@ -132,4 +138,15 @@ footer a {
 
 .subscribe-form button:hover {
     transition: transform 0.5s;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
